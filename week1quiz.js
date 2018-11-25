@@ -217,7 +217,7 @@ const questions = {
             d: `document.getElementById(“box”).backgroundColor = “orange”`
         }
     },
-    // THIS
+    // ------ THIS ------
     21: {
         question: `what is going to be printed if we run 
                     questions['21'].code()`,
