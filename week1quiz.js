@@ -1,5 +1,5 @@
 
-// WRITE YOUR ANSWERS IN THE OBJECT IN ANSWERS.JS
+// WRITE YOUR ANSWERS IN THE OBJECT IN week1answers.js
 
 const questions = {
     // ------ OBJECTS & ARRAYS ------
