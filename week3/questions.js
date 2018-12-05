@@ -79,7 +79,7 @@ const questions = {
             })
             console.log(data)
         `,
-        answers:{
+        answers: {
             a: "Console logs the data that came back from the API",
             b: "Console logs something that's not our data",
             c: "Console logs the data that came back from the API, wrapp in an object or array",
@@ -124,8 +124,235 @@ const questions = {
     },
     // ------ OOP ------
     10: {
-        question: ``
+        question: `OOP is a natural extension of...`,
+        answers: {
+            a: "Closures",
+            b: "Callback functions",
+            c: "Modules",
+            d: "JSON"
+        }
+    },
+    11: {
+        question: `Does a class constructor ever get invoked?`,
+        answers: {
+            a: "Yes, the `new` keyword precedes its invocation",
+            b: "Yes, as soon as we access a property of a class' instance",
+            c: "No, the values automatically get attached to the instance",
+            d: "Only when we use `super`"
+        }
+    },
+    12: {
+        question: `What is an instance?`,
+        answers: {
+            a: "A concrete manifestation of a class",
+            b: "A plain JS object",
+            c: "A module",
+            d: "All of the above"
+        }
+    },
+    13: {
+        question: `What does the following code do?
+            class Trip{
+                constructor(destination, date){
+                    this.dest = destination
+                    this.date = date
+                    this.plan = []
+                }
+            }
+            let t = Trip("Guadalupe", new Date())
+        `,
+        answers: {
+            a: "Nothing",
+            b: "Throws an error",
+            c: "Creates an instance of Trip, and stores it in `t`",
+            d: "c, but the value of `this.plan` will be `undefined` because we don't pass it in the constructor"
+        }
+    },
+    14: {
+        question: `What does the super keyword do?`,
+        answers: {
+            a: "Invokes the class' consturctor, which is mandatory",
+            b: "Invokes the class' constructor, but it's optional",
+            c: "Invokes the parent's constructor, which is mandatory",
+            d: "Invokes the parent's constructor, but it's optional"
+        }
+    },
+    15: {
+        question: `What does the following code do?
+
+            class Page{
+                constructor(text){
+                    this.text = text
+                }
+            }
+
+            class Notebook{
+                constructor(pageNum){
+                    this.pageNum = pageNum
+                    this.pages = []
+                }
+
+                write(page){
+                    this.pages.push(page)
+                }
+            }
+
+            class Diary extends Notebook{
+                constructor(pageNum, owner){
+                    super(pageNum, owner)
+                    this.owner = JSON.stringify(owner)
+                }
+            }
+
+            const myDiary = new Diary(50, "Shila")
+            const mathNotebook = new Notebook(200)
+            const p1 = new Page("Pythagoreas realized tha the sum of the squares of the sides of a right triangle will equal the square of the hypoteneuse")
+            myDiary.pages.push(new Page("I think I'm in love with a Greek man."))
+
+            console.log(myDiary.pages[0].text)
+        `,
+        answers: {
+            a: "Throw an error",
+            b: "Console log `undefined`",
+            c: "Console log the sentence about Pythagoreas",
+            d: "Console log the sentence about the Greek man"
+        }
+    },
+    16: {
+        question: `Using the same code from the previous question (except for the console log at the end), what will the following do?
+        console.log(mathNotebook.pages[0].text)
+        `,
+        answers: {
+            a: "Throw an error",
+            b: "Console log `undefined`",
+            c: "Console log the sentence about Pythagoreas",
+            d: "Console log the sentence about the Greek man"
+        }
+    },
+    17: {
+        question: `Using the same code from before (except for the console log at the end), what will the following do?
+            console.log(p1 instanceof Page)
+            console.log(myDiary instanceof Notebook)
+            console.log(myDiary instanceof mathNotebook)
+        `,
+        answers: {
+            a: "Console log `true` for all three",
+            b: "Console log `true` twice then `false` once",
+            c: "Console log `false` for all three",
+            d: "Console log `true` twice then throw an error"
+        }
+    },
+    18: {
+        question: `Assuming we have a class Planet that has on parameter in its constructor, name, what will the following do?
+            let earth = new Planet
+            earth.name = "Earth 2.0"
+            console.log(earth.name)
+        `,
+        answers: {
+            a: "Throw an error",
+            b: "Console log `undefined`",
+            c: "Console log `Earth 2.0",
+            d: "Console log ''"
+        }
+    },
+
+    19: {
+        question: `What's going on in the following code?
+            class Image{
+                constructor(url, width, height, db){
+                    this.url = url
+                    this.width = width || 150
+                    this.height = height || 150
+                    this.db = db
+                }
+
+                save(){
+                    this.db.save(JSON.stringify(this))
+                }
+            }
+
+            class SQL_DB{
+                constructor(){}
+                save(str){
+                    //wicked code that saves to SQL database
+                }
+            }
+
+            class Mongo_DB{
+                constructor(){}
+                save(str){
+                    //wicked code that saves to Mongo database
+                }
+            }
+
+            const sqlDB = new SQL_DB()
+            const mongoDB = new Mongo_DB()
+            const pic = new Image("https://a3.amazon.com/93112/ist.png", null, null, sqlDB)
+
+            pic.save()
+        `,
+        answers: {
+            a: "Throws an error, we need to call `super` inside of `Image`'s `save` method",
+            b: "Throws an error, you can't stringify `this`",
+            c: "Saves the image to the SQL database",
+            d: "Saves a stringified version of the image object to the SQL database"
+        }
+    },
+    // ------ Local Storage ------
+    20: {
+        question: `Where is Local Storage stored, and what's the deal with stringify/parse?`,
+        answers: {
+            a: "Cache. We use stringify/parse to insert data as a string then extract it normally",
+            b: "Cache. We use stringify/parse to insert our data in a consistent way",
+            c: "Browser. We use stringify/parse to insert data as a string then extract it normally",
+            d: "Browser. We use stringify/parse to insert our data in a consistent way"
+        }
+    },
+    // ------ Bam ------
+    21: {
+        question: `What's going on with this code?
+
+            class APIManager{
+                constructor(route){
+                    this.route = route
+                    this.data = {}
+                }
+
+                fetch(){
+                    $.get(route, function(response){
+                        this.data = response
+                    })
+                }
+            }
+
+            class Renderer{
+                construcor(scriptID, containerID, apiManager){
+                    this.scriptID = scriptID
+                    this.containerID = containerID
+                    this.apiManager = apiManager
+                }
+
+                render(){    
+                    let source = $("#" + this.scriptID).html()
+                    let template = Handlebars.compile(source)
+                    $("#" + this.containerID).append(template(this.apiManager.data))
+                }
+            }
+
+            const foodApi = new APIManager("/foodRoute")
+            const renderer = new Renderer("food-template", "container", foodApi)
+            
+            foodApi.fetch()
+            renderer.render()
+        `
+    },
+    answers: {
+        a: "Perfectly valid code",
+        b: "There's an async problem",
+        c: "There's problem with Handlebars (not syntax related)",
+        d: "There's a problem with our API request"
     }
+
 }
 
 
