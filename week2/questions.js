@@ -6,7 +6,7 @@ const questions = {
         question: `When you use grid-template-columns:`,
         answers: {
             a: "You must also use grid-template-rows",
-            b: "You must also use grid-template-areas",
+            // b: "You must also use grid-template-areas",
             c: "Both a and b",
             d: "None of the above"
         }
@@ -15,7 +15,7 @@ const questions = {
         question: `When you use grid-template-areas:`,
         answers: {
             a: "You must also use grid-area in all the children elements",
-            b: "You must also use grid-area in the direct children elements",
+            // b: "You must also use grid-area in the direct children elements",
             c: "You can only use single-letter named-spaces",
             d: "None of the above"
         }
@@ -26,7 +26,7 @@ const questions = {
             a: `You never have to worry about any of the basic CSS stuff again`,
             b: `Specificity doesn't matter anymore (id versus class, for example)`,
             c: `Both a and b`,
-            d: `None of the above`
+            // d: `None of the above`?
         }
     },
     // ------ Responsive Design ------
@@ -35,7 +35,7 @@ const questions = {
         answers: {
             a: `The max-width of the page is 768px`,
             b: `At 768px or more, we will apply different CSS`,
-            c: `At 768px or fewer, we will apply different CSS`,
+            // c: `At 768px or fewer, we will apply different CSS`,
             d: `At exactly 768px, we will apply different CSS`
         }
     },
@@ -55,7 +55,7 @@ const questions = {
         answers: {
             a: `12, 1.5 seconds later`,
             b: `An error immediately`,
-            c: `undefined, 1.5 seconds later`,
+            // c: `undefined, 1.5 seconds later`,
             d: `Nothing, this doesn't run`,
             e: "None of the above"
         }
@@ -66,7 +66,7 @@ const questions = {
             a: `Anonymous functions don't have names, named functions do`,
             b: `Anonymous functions get invoked automatically, named functions need to be invoked`,
             c: `Anonymous functions have to be callbacks, named functions do not`,
-            d: `a and c`,
+            // d: `a and c`,
             e: `All of the above`
         }
     },
@@ -75,7 +75,7 @@ const questions = {
                    setInterval(()=>{console.log("hi")}, 2000)
                    `,
         answers: {
-            a: `"hi" every two seconds`,
+            // a: `"hi" every two seconds`,
             b: `"hi" after two seconds`,
             c: `"hi"`,
             d: `undefined`,
@@ -94,14 +94,14 @@ const questions = {
         answers: {
             a: "Syntax Error, because `yell` is defined before `run`",
             b: "Run, Forest, run!",
-            c: "`Run, ${yell function}`, run!",
+            // c: "`Run, ${yell function}`, run!",
             d: "undefined"
         }
     },
     // ------ Closures & Modules ------
     9: {
         question: `Given the following code: 
-            let _memories = ["that time at band camp", "yesterday's breakfast"]
+            const _memories = ["that time at band camp", "yesterday's breakfast"]
     
             const Brain = function(){
                 const dayDream = () => _memories
@@ -122,7 +122,7 @@ const questions = {
     
             Do we have closure here?`,
         answers: {
-            a: "Yes",
+            // a: "Yes",
             b: "No, because `brain.freakOut` doesn't access `_memories`",
             c: "No, because `_memories` is outside of Brain",
             d: "No, because we're returning the wrong functions"
@@ -133,7 +133,7 @@ const questions = {
         answers: {
             a: "Nothing, it's just a variable",
             b: "It means `_memories` needs to get its value from outside",
-            c: "It means `_memories` should be treated as a 'private' variable",
+            // c: "It means `_memories` should be treated as a 'private' variable",
             d: "It means we have to use `this` to access `_memories`"
         }
     },
@@ -142,7 +142,7 @@ const questions = {
         answers: {
             a: "Closures are the same as modules",
             b: "Closures only work with objects",
-            c: "Closures prevent the memory from setting variables free",
+            // c: "Closures prevent the memory from setting variables free",
             d: "Closures don't work differently with `this`, they use lexical scope"
         }
     },
@@ -151,7 +151,7 @@ const questions = {
         question: `What is $ ?`,
         answers: {
             a: "The jQuery library",
-            b: "The jQuery function",
+            // b: "The jQuery function",
             c: "The jQuery object",
             d: "The jQuery framework"
         }
@@ -163,7 +163,7 @@ const questions = {
         answers: {
             a: "Nothing",
             b: "Throw an error",
-            c: "Alert 'hi' when `#btn` is clicked",
+            // c: "Alert 'hi' when `#btn` is clicked",?
             d: "Alert 'hi' when the script runs"
         }
     },
@@ -182,7 +182,7 @@ const questions = {
             a: "Display only 'Kayne' in a `div`, with an input box below",
             b: "Display both 'Shoobert' and 'Kayne' in the same `div` with an input box below",
             c: "Display [objectObject] instead of 'Shoobert' and 'Kayne'",
-            d: "Display both 'Shoobert' and 'Kayne' in separate `div`s with an input box below each",
+            // d: "Display both 'Shoobert' and 'Kayne' in separate `div`s with an input box below each",
         }
     },
     15: {
@@ -190,7 +190,7 @@ const questions = {
             $('.box').css('background-color', 'red')
         `,
         answers: {
-            a: "Change the background color of all `.box`es to red",
+            // a: "Change the background color of all `.box`es to red",
             b: "Nothing, `.css` returns an array of elements",
             c: "Throw an error",
             d: "Change the background color of the first `.box` to red"
@@ -202,7 +202,7 @@ const questions = {
         answers: {
             a: "Model View Command",
             b: "Mapping View Command",
-            c: "Model View Controller",
+            // c: "Model View Controller",
             d: "Mapping View Controller"
         }
     },
@@ -212,14 +212,14 @@ const questions = {
             a: "Single Responsibility",
             b: "Efficiency",
             c: "Separation of concerns",
-            d: "All of the above *are* necessarily benefits of MVC"
+            // d: "All of the above *are* necessarily benefits of MVC"
         }
     },
     18: {
         question: `In MVC, `,
         answers: {
             a: "The Controller (user actions) affect the View (DOM), then updates the Model (data)",
-            b: "The Controller invokes functions in the Model, and then updates the View",
+            // b: "The Controller invokes functions in the Model, and then updates the View",
             c: "The Model responds to changes in the View that are triggered by the Controller",
             d: "The Model updates the View when it gets triggered by the Controller"
         }
@@ -228,7 +228,7 @@ const questions = {
         question: `According to MVC principles, when a user clicks on the 'remove' button and we get an ID of an element to remove,`,
         answers: {
             a: "We should invoke `$('#id').remove()` (assume '#id' is the correct id)",
-            b: "We should update our data model, then re-render the whole view",
+            // b: "We should update our data model, then re-render the whole view",
             c: "Neither a nor b",
             d: "Either a or b"
         }
@@ -246,9 +246,9 @@ const questions = {
             </div>
         `,
         answers: {
-            a: `$(".btn").on("click", function(){
-                    alert($(this).closest(".container").find(".username").val())
-                })`,
+            // a: `$(".btn").on("click", function(){
+            //         alert($(this).closest(".container").find(".username").val())
+            //     })`,
             b: `$(".btn").on("click", () =>{
                     alert($(this).closest(".container").find(".username").val())
                 })`,
@@ -280,7 +280,7 @@ const questions = {
             d: "The `p` changes to `<p class='nalo'>flap - Ryk</p>",
             e: "The `p` changes to `<p class='nalo'>undefined - Ryk</p>",
             f: "The `p` changes to `<p class='nalo'>[objectObject] - Ryk</p>",
-            g: "The `p` changes to `<p class='nalo'><div>dub - Ryk</div></p>",
+            /* g: "The `p` changes to `<p class='nalo'><div>dub - Ryk</div></p>", */
             h: "The `p` changes to `<p class='nalo'><div>flap - Ryk</div></p>",
             i: "The `p` changes to `<p class='nalo'><div>undefined - Ryk</div></p>",
             j: "The `p` changes to `<p class='nalo'><div>[objectObject] - Ryk</div></p>",
