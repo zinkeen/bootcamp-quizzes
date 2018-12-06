@@ -118,8 +118,8 @@ const questions = {
         answers: {
             a: "Nothing",
             b: "Throw an error",
-            c: "Print 'Mola'",
-            d: "Print 'Bellatrix'"
+            c: "Print the Mola object",
+            d: "Print the Bellatrix object"
         }
     },
     // ------ OOP ------
@@ -243,7 +243,7 @@ const questions = {
         }
     },
     18: {
-        question: `Assuming we have a class Planet that has on parameter in its constructor, name, what will the following do?
+        question: `Assuming we have a class Planet that has one parameter in its constructor, name, what will the following do?
             let earth = new Planet
             earth.name = "Earth 2.0"
             console.log(earth.name)
