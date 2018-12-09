@@ -5,7 +5,7 @@ const questions = {
     1: {
         question: `Which of these is true?`,
         answers: {
-            a: "JSON is valid JS but JS isn't always valid JSON",
+            // a: "JSON is valid JS but JS isn't always valid JSON",
             b: "JSON is valid JS and JS is never valid JSON",
             c: "JS is valid JSON but JSON isn't always valid JS",
             d: "JS is valid JSON and JSON is never valid JS"
@@ -16,7 +16,7 @@ const questions = {
         answers: {
             a: "No dangling commas, no comments, no special characters in the keys",
             b: "No special characters in the keys, no single-quote keys, no trailing commas",
-            c: "No dangling commas, no comments, keys must be wrapped in double quotes",
+            // c: "No dangling commas, no comments, keys must be wrapped in double quotes",
             d: "There are not special rules to JSON, any valid JS object is fine"
         }
     },
@@ -35,7 +35,7 @@ const questions = {
             a: "Yes",
             b: "No, because Alexa and Jarvis are on the same line",
             c: "No, because we used `const` for `newHTML` instead of let",
-            d: "No, because people is an array"
+            // d: "No, because people is an array"
         }
     },
     4: {
@@ -50,7 +50,7 @@ const questions = {
             a: "Yes",
             b: "No, it needs to be nested in an `#each`",
             c: "No, it needs an `img` tag",
-            d: "No, it needs an `img` tag and a `src` attribute"
+            // d: "No, it needs an `img` tag and a `src` attribute"
         }
     },
     // ------ APIs & GET Requests ------
@@ -60,7 +60,7 @@ const questions = {
             a: "Application Protocol Interface",
             b: "Application Parameters Interface",
             c: "Application Programming Internet",
-            d: "Application Programming Interface"
+            // d: "Application Programming Interface"
         }
     },
     6: {
@@ -69,7 +69,7 @@ const questions = {
             a: "Getting JSON files from servers",
             b: "Getting JSON from servers",
             c: "Getting JSON and files from servers",
-            d: "Getting any files from servers"
+            // d: "Getting any files from servers"
         }
     },
     7: {
@@ -83,8 +83,8 @@ const questions = {
             a: "Console logs the data that came back from the API",
             b: "Console logs something that's not our data",
             c: "Console logs the data that came back from the API, wrapp in an object or array",
-            d: "Throws an error"
-        }
+        //     d: "Throws an error"
+        // }
     },
     // ------ Array Methods ------
     8: {
@@ -106,7 +106,7 @@ const questions = {
         answers: {
             a: "Nothing",
             b: "Console log 'Humbert', 'Bellatrix'",
-            c: "Console log 'Bellatrix', 'Mola'",
+            // c: "Console log 'Bellatrix', 'Mola'",
             d: "Console log 'Mola', 'Humbert'",
             e: "Throw an error"
         }
@@ -117,7 +117,7 @@ const questions = {
         `,
         answers: {
             a: "Nothing",
-            b: "Throw an error",
+            // b: "Throw an error",
             c: "Print 'Mola'",
             d: "Print 'Bellatrix'"
         }
@@ -128,14 +128,14 @@ const questions = {
         answers: {
             a: "Closures",
             b: "Callback functions",
-            c: "Modules",
+            // c: "Modules",
             d: "JSON"
         }
     },
     11: {
         question: `Does a class constructor ever get invoked?`,
         answers: {
-            a: "Yes, the `new` keyword precedes its invocation",
+            // a: "Yes, the `new` keyword precedes its invocation",
             b: "Yes, as soon as we access a property of a class' instance",
             c: "No, the values automatically get attached to the instance",
             d: "Only when we use `super`"
@@ -144,7 +144,7 @@ const questions = {
     12: {
         question: `What is an instance?`,
         answers: {
-            a: "A concrete manifestation of a class",
+            // a: "A concrete manifestation of a class",
             b: "A plain JS object",
             c: "A module",
             d: "All of the above"
@@ -163,7 +163,7 @@ const questions = {
         `,
         answers: {
             a: "Nothing",
-            b: "Throws an error",
+            // b: "Throws an error",
             c: "Creates an instance of Trip, and stores it in `t`",
             d: "c, but the value of `this.plan` will be `undefined` because we don't pass it in the constructor"
         }
@@ -173,7 +173,7 @@ const questions = {
         answers: {
             a: "Invokes the class' consturctor, which is mandatory",
             b: "Invokes the class' constructor, but it's optional",
-            c: "Invokes the parent's constructor, which is mandatory",
+            // c: "Invokes the parent's constructor, which is mandatory",
             d: "Invokes the parent's constructor, but it's optional"
         }
     },
@@ -215,15 +215,15 @@ const questions = {
             a: "Throw an error",
             b: "Console log `undefined`",
             c: "Console log the sentence about Pythagoreas",
-            d: "Console log the sentence about the Greek man"
-        }
+        //     d: "Console log the sentence about the Greek man"
+        // }
     },
     16: {
         question: `Using the same code from the previous question (except for the console log at the end), what will the following do?
         console.log(mathNotebook.pages[0].text)
         `,
         answers: {
-            a: "Throw an error",
+            // a: "Throw an error",
             b: "Console log `undefined`",
             c: "Console log the sentence about Pythagoreas",
             d: "Console log the sentence about the Greek man"
@@ -231,15 +231,15 @@ const questions = {
     },
     17: {
         question: `Using the same code from before (except for the console log at the end), what will the following do?
-            console.log(p1 instanceof Page)
-            console.log(myDiary instanceof Notebook)
+            console.log(p1 instanceof Page) t
+            console.log(myDiary instanceof Notebook)1 
             console.log(myDiary instanceof mathNotebook)
         `,
         answers: {
             a: "Console log `true` for all three",
             b: "Console log `true` twice then `false` once",
             c: "Console log `false` for all three",
-            d: "Console log `true` twice then throw an error"
+            // d: "Console log `true` twice then throw an error"
         }
     },
     18: {
@@ -249,7 +249,7 @@ const questions = {
             console.log(earth.name)
         `,
         answers: {
-            a: "Throw an error",
+            // a: "Throw an error",
             b: "Console log `undefined`",
             c: "Console log `Earth 2.0",
             d: "Console log ''"
@@ -293,7 +293,7 @@ const questions = {
         `,
         answers: {
             a: "Throws an error, we need to call `super` inside of `Image`'s `save` method",
-            b: "Throws an error, you can't stringify `this`",
+            // b: "Throws an error, you can't stringify `this`",
             c: "Saves the image to the SQL database",
             d: "Saves a stringified version of the image object to the SQL database"
         }
@@ -305,7 +305,7 @@ const questions = {
             a: "Cache. We use stringify/parse to insert data as a string then extract it normally",
             b: "Cache. We use stringify/parse to insert our data in a consistent way",
             c: "Browser. We use stringify/parse to insert data as a string then extract it normally",
-            d: "Browser. We use stringify/parse to insert our data in a consistent way"
+            // d: "Browser. We use stringify/parse to insert our data in a consistent way"
         }
     },
     // ------ Bam ------
@@ -349,7 +349,7 @@ const questions = {
     answers: {
         a: "Perfectly valid code",
         b: "There's an async problem",
-        c: "There's problem with Handlebars (not syntax related)",
+        // c: "There's problem with Handlebars (not syntax related)",
         d: "There's a problem with our API request"
     }
 
