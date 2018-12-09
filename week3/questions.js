@@ -75,7 +75,7 @@ const questions = {
     7: {
         question: `What does the following do?
             let data = $.get('/someAPIurl', function(result){
-                return data
+                return result
             })
             console.log(data)
         `,
