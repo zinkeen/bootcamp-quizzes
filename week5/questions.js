@@ -230,7 +230,7 @@ const questions = {
         answers: {
             a: "An idea that says that we should write test for all our code",
             b: "An idea that says that separate programmers should write the test and the code",
-            c: "An idea that says that we should tests first, then the code",
+            c: "An idea that says that we should write tests first, then the code",
             d: "All of the above"
         }
     },
