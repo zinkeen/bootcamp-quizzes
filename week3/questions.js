@@ -68,20 +68,20 @@ const questions = {
         answers: {
             a: "Getting JSON files from servers",
             b: "Getting JSON from servers",
-            c: "Getting JSON and files from servers",
-            // d: "Getting any files from servers"
-        }
+            // c: "Getting JSON and files from servers" 
+            d: "Getting any files from servers"
+        } 
     },
     7: {
         question: `What does the following do?
             let data = $.get('/someAPIurl', function(result){
-                return data
+                // return data /mistake
             })
             console.log(data)
         `,
         answers: {
             a: "Console logs the data that came back from the API",
-            b: "Console logs something that's not our data",
+            // b: "Console logs something that's not our data",
             c: "Console logs the data that came back from the API, wrapp in an object or array",
         //     d: "Throws an error"
         // }
@@ -173,7 +173,7 @@ const questions = {
         answers: {
             a: "Invokes the class' consturctor, which is mandatory",
             b: "Invokes the class' constructor, but it's optional",
-            // c: "Invokes the parent's constructor, which is mandatory",
+            // c: "Invokes the parent's constructor, which is mandatory", even if you don't pass any parametrs you must have super
             d: "Invokes the parent's constructor, but it's optional"
         }
     },
@@ -198,7 +198,7 @@ const questions = {
             }
 
             class Diary extends Notebook{
-                constructor(pageNum, owner){
+                constructor(pageNum, owner){   owner gets ignored check example with console.log several numbers - parametr  is just ignored
                     super(pageNum, owner)
                     this.owner = JSON.stringify(owner)
                 }
@@ -220,7 +220,7 @@ const questions = {
     },
     16: {
         question: `Using the same code from the previous question (except for the console log at the end), what will the following do?
-        console.log(mathNotebook.pages[0].text)
+        console.log(mathNotebook.pages[0].text) pages[0] is undefined as I didn't pass the pages
         `,
         answers: {
             // a: "Throw an error",
@@ -249,9 +249,9 @@ const questions = {
             console.log(earth.name)
         `,
         answers: {
-            // a: "Throw an error",
+            a: "Throw an error",
             b: "Console log `undefined`",
-            c: "Console log `Earth 2.0",
+            // c: "Console log `Earth 2.0", - because it is undefined in creation as it was not invoked
             d: "Console log ''"
         }
     },
@@ -293,9 +293,9 @@ const questions = {
         `,
         answers: {
             a: "Throws an error, we need to call `super` inside of `Image`'s `save` method",
-            // b: "Throws an error, you can't stringify `this`",
+            b: "Throws an error, you can't stringify `this`",
             c: "Saves the image to the SQL database",
-            d: "Saves a stringified version of the image object to the SQL database"
+            // d: "Saves a stringified version of the image object to the SQL database"
         }
     },
     // ------ Local Storage ------
@@ -304,8 +304,8 @@ const questions = {
         answers: {
             a: "Cache. We use stringify/parse to insert data as a string then extract it normally",
             b: "Cache. We use stringify/parse to insert our data in a consistent way",
-            c: "Browser. We use stringify/parse to insert data as a string then extract it normally",
-            // d: "Browser. We use stringify/parse to insert our data in a consistent way"
+            // c: "Browser. We use stringify/parse to insert data as a string then extract it normally",
+            d: "Browser. We use stringify/parse to insert our data in a consistent way"
         }
     },
     // ------ Bam ------
@@ -348,8 +348,8 @@ const questions = {
     },
     answers: {
         a: "Perfectly valid code",
-        b: "There's an async problem",
-        // c: "There's problem with Handlebars (not syntax related)",
+        // b: "There's an async problem",
+        c: "There's problem with Handlebars (not syntax related)",
         d: "There's a problem with our API request"
     }
 
