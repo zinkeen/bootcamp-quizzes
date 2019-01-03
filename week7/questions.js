@@ -71,7 +71,7 @@ const questions = {
         }
     },
     8: {
-        question: `What is the time complexity of finding a node in a Binary Search Tree?`,
+        question: `What is the time complexity of finding a node in a balanced Binary Search Tree?`,
         answers: {
             a: "O( 1 )",
             b: "O( log(n) )",
@@ -81,7 +81,7 @@ const questions = {
         }
     },
     9: {
-        question: `What is the time complexity of inserting a node into a BST?`,
+        question: `What is the time complexity of inserting a node into a balanced BST?`,
         answers: {
             a: "O( 1 )",
             b: "O( log(n) )",
