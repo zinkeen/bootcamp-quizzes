@@ -229,35 +229,79 @@ const questions = {
         }
     },
     18: {
-        question: `The following is a test for a function called removeAccount(accounts, account) - is the test good enough? 
-                    Assume the test's name is as descriptive as it needs to be
+        question: `When deciding on which data structure to use, what should we consider?`,
+        answers: {
+            a: "The total time complexities of the insert, find, update, and remove operations",
+            b: "The worst time complexity out of the insert, find, update, and remove operations",
+            c: "The best time complexity out of the insert, find, update, and remove operations",
+            d: "The business requirements of our system"
+        }
+    },
+    19: {
+        question: `Tree Q`,
+        answers: {
+            a: "",
+            b: "",
+            c: "",
+            d: ""
+        }
+    },
+    20: {
+        question: `What will the following do?
+            let queue = new Queue()
+            q.enqueue(4)
+            q.enqueue(1)
+            q.enqueue(3)
 
-        test("should remove an account from the accounts array, based off its ID", function(){
-            let dummyAccounts = [{data:{}, id: 312}, {data:{}, id: 118}]
-            let dummyAccount = {data:{}, id: 118}
+            const clearQueue = function(q){
+                return q.peek() ? clearQueue(q.dequeue()) : "Done"
+            }
 
-            removeAccount(dummyAccounts, dummyAccount)
-
-            expect(dummyAccounts.length).toBe(1)
-            expect(dummyAccounts[0].id).not.toBe(118)
-            expect(dummyAccounts[0].id).toBe(312)
-        })
-            
+            clearQueue(queue)
         `,
         answers: {
-            a: "Yes",
-            b: "No"
+            a: "Throw an error",
+            b: "Nothing",
+            c: "Cause an infinite loop",
+            d: "Remove all the items from the queue and then return 'Done'"
         }
     },
     // ------ Bam ------
-    19: {
-        question: `What does this mean to you?
-            [$.get, '/items/', Item.find, res.send, $(elem).append]
+    21: {
+        question: `What will this do?
+            let people = [
+                {name: "Claire", priority: "MED"},
+                {name: "Josh", priority: "HIGH"},
+                {name: "Tom", priority: "MED"},
+                {name: "Geoffery", priority: "LOW"}
+            ]
+
+            let stack = new Stack()
+            let priorityQueue = new Queue()
+            let medQueue = new Queue()
+            let trashQueue = new Queue()
+
+            people.forEach(p => stack.push(p))
+
+            const transfer = function(s){
+                if(!s.length){ return }
+
+                s.peek().priority === "HIGH" ?
+                    priorityQueue.enqueue(s.pop().name) :
+                    s.peek().priority === "MED" ?
+                        medQueue.enqueue(s.pop().name):
+                        trashQueue.enqueue(s.pop().name)
+                
+                transfer(s)
+            }
+
+            transfer(stack)
         `,
         answers: {
-            a: "A mistake",
-            b: "Fullstack",
-            c: "Nonesense"
+            a: "Throw an error",
+            b: "Nothing",
+            c: "Cause an infinite loop",
+            d: "Populate each queue by priority"
         }
     }
 }
