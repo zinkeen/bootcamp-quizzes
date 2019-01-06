@@ -71,7 +71,7 @@ const questions = {
         }
     },
     8: {
-        question: `What is the time complexity of finding a node in a Binary Search Tree?`,
+        question: `What is the time complexity of finding a node in a balanced Binary Search Tree?`,
         answers: {
             a: "O( 1 )",
             b: "O( log(n) )",
@@ -81,7 +81,7 @@ const questions = {
         }
     },
     9: {
-        question: `What is the time complexity of inserting a node into a BST?`,
+        question: `What is the time complexity of inserting a node into a balanced BST?`,
         answers: {
             a: "O( 1 )",
             b: "O( log(n) )",
@@ -238,12 +238,12 @@ const questions = {
         }
     },
     19: {
-        question: `Tree Q`,
+        question: `When inserting a node into a binary search tree we:`,
         answers: {
-            a: "",
-            b: "",
-            c: "",
-            d: ""
+            a: "Run our insert method on the root node, and recursively go down our tree to insert",
+            b: "Run our insert method on a the relevant child node we want to 'insertLeft()' or 'insertRight()' on",
+            c: "First recursively check if it already exists and only insert if it doesn't exist",
+            d: "Add the node to the children array of whichever node the insert method was run on"
         }
     },
     20: {
