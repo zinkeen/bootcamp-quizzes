@@ -189,7 +189,7 @@ const questions = {
     13: {
         question: `Will this work?
             const getFeed = async function(user){
-                let name = user.firstName = user.lastName
+                let name = user.firstName + user.lastName
                 let feed = await $.get('/feedApi/' + name)
                 return feed
             }
