@@ -75,7 +75,11 @@ const questions = {
     7: {
         question: `What does the following do?
             let data = $.get('/someAPIurl', function(result){
+<<<<<<< HEAD
                 // return data /mistake
+=======
+                return result
+>>>>>>> upstream/master
             })
             console.log(data)
         `,
