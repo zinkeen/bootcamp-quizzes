@@ -249,9 +249,9 @@ const questions = {
     20: {
         question: `What will the following do?
             let queue = new Queue()
-            q.enqueue(4)
-            q.enqueue(1)
-            q.enqueue(3)
+            queue.enqueue(4)
+            queue.enqueue(1)
+            queue.enqueue(3)
 
             const clearQueue = function(q){
                 return q.peek() ? clearQueue(q.dequeue()) : "Done"
